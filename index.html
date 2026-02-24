@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Presentación</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg, #FFD1DC, #ADD8E6);
+text-align:center;
+padding:40px;
+}
+
+.caja{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0px 0px 10px gray;
+}
+
+input{
+padding:10px;
+font-size:18px;
+margin:10px;
+}
+
+button{
+padding:12px 20px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#AEC6CF;
+}
+
+#botonPDF{
+display:none;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h2>Ingresa tu nombre</h2>
+
+<input type="text" id="nombre">
+
+<br>
+
+<button onclick="mostrar()">Continuar</button>
+
+<div id="botonPDF">
+
+<h3 id="mensaje"></h3>
+
+<br>
+
+<a href="https://drive.google.com/file/d/1bXxqexH5GrucV3h3VV3wW8QeP7uScNsm/view?usp=drivesdk" target="_blank">
+<button>Ver presentación</button>
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function mostrar(){
+
+var nombre=document.getElementById("nombre").value;
+
+if(nombre==""){
+alert("Escribe tu nombre");
+return;
+}
+
+document.getElementById("mensaje").innerHTML=
+"Bienvenido "+nombre;
+
+document.getElementById("botonPDF").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
